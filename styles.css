@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background-color: #A0ADFF;
+  font-family: 'Press Start 2P';
+}
+.game-board-default {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
