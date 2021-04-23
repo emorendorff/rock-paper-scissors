@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-      <meta charset="utf-8">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
       <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,16 +9,24 @@
       <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <main>
-        <section class="game-board-default">
+    <main class="main-page">
+        <section class="side">
+            <h2 class="human-emoji">🧑🏼‍🎤</h2>
+            <h3 class="human">Human</h3>
+            <h4 class="wins">Wins:placeholder</h4>
+            <button type="button" name="button"></button>
+        </section>
+        <section class="center-board">
           <h1 class="rps-title">Rock, Paper, Scissors</h1>
           <h2 class="game-fighter-text">Choose your game!</h2>
-          <section class="classic-game">
-            <pre class="classic-rules">
-                Rock defeats scissors.
-                Paper defeats rock.
-                Scissors defeat paper.
-            </pre>
+          <section class="game-option">
+            <h3>Classic</h3>
+            <p class="classic-rules alt-text">
+                Rock defeats scissors. <br>
+                Paper defeats rock. <br>
+                Scissors defeat paper.<br>
+            </p>
+         </section>
           <section class="classic-fighters">
             <img class="rock hidden" src="./assets/the-rock.png" alt="dwayne the rock johnson">
             <img class="tp hidden" src="./assets/toilet-paper.png" alt="toilet paper">
@@ -32,32 +39,24 @@
             <img class="mario hidden" src="./assets/mario.png" alt="mario">
             <img class="piranha hidden" src="./assets/pirhana.png" alt="piranha mario plant">
         </section>
-        <section class="difficult-game">
-          <pre class="difficult-rules">
-              Boo defeats koopa + piranha plant.
-              Mario defeats boo + chompy.
-              Koopa defeats Mario + piranha plant.
-              Piranha plant defeats Mario + chompy.
-              Chompy defeats koopa + boo.
-          </pre>
+        <section class="game-option">
+          <h3>Difficult</h3>
+          <p class="difficult-rules alt-text">
+              Boo defeats koopa + piranha plant. <br>
+              Mario defeats boo + chompy.<br>
+              Koopa defeats Mario + piranha plant.<br>
+              Piranha plant defeats Mario + chompy.<br>
+              Chompy defeats koopa + boo.<br>
+          </p>
         </section>
       </section>
-      <aside class="left-side">
-        <h2 class="human-emoji">🧑🏼‍🎤</h2>
-        <h3 class="human">Human</h3>
-        <h4 class="wins">Wins:placeholder</h4>
-        <button type="button" name="button"></button>
-      </aside>
-      <aside class="right-side">
+      <section class="side">
         <h2 class="computer-emoji">‍🖥</h2>
         <h3 class="computer">Computer</h3>
         <h4 class="wins">Wins:placeholder</h4>
-      </aside>
-
-
-
-
-
+      </section>
+      </section>
+    </main>
 
 
 

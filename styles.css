@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: #A0ADFF;
+  font-family: 'Press Start 2P';
+}
+
+.alt-text {
+  font-family: 'Nunito', sans-serif;
+}
+
+ .main-page{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.center-board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side {
+  background-color: #DC5A17;
+  height: 100vh;
+}
+
+.game-option {
+  text-align: center;
+  background-color: #DE5818;
+  width: 15vw
+}
+
+.hidden {
+  display: none;
+}
