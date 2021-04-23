@@ -1,10 +1,18 @@
 class Game {
   constructor() {
-    this.playerOne = new Player('Human', '🧑🏼‍🎤')
-    this.playerTwo = new Player('Computer', '🖥')
-    this.gameChoice = gameChoice
+    this.playerOne = new Player('Human', '🧑🏼‍🎤');
+    this.playerTwo = new Player('Computer', '🖥');
+    this.gameChoice = gameChoice;
     this.humanTurn = true;
-    this.fighters = []
+    this.fighters = [];
+  }
+}
+
+chooseGame() {
+  if(this.gameChoice === 'Classic') {
+    this.fighters = ['Rock', 'Paper', 'Scissors ']
+  } else if (this.gameChoice === 'Difficult') {
+    this.fighters = ['Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha']
   }
 }
 //two player instances
