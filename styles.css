@@ -33,6 +33,29 @@ body {
   width: 15vw
 }
 
+.game-option:hover {
+  background-color: #FBC27D
+}
+
+/* .classic-fighters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.rock {
+  max-width: 20%;
+}
+
+.tp {
+  max-width: 20%;
+}
+
+.scissors {
+  max-width: 20%
+}
+
 .hidden {
   display: none;
 }

@@ -21,6 +21,7 @@ pickGame() {
 pickFighters() {
 
 }
+//how the fuck do i link this array to the click images as the data model vs displaying on the dom
 //two player instances
 //way to keep track of the data for the game board
 //way to keep track of the selected game type
