@@ -1,6 +1,8 @@
+var Player = require(./Player)
+
 class Game {
-  constructor() {
-    this.playerOne = new Player('Human', '🧑🏼‍🎤');
+  constructor(gameChoice) {
+    this.playerOne = player1;
     this.playerTwo = new Player('Computer', '🖥');
     this.gameChoice = gameChoice;
     this.humanTurn = true;
@@ -8,12 +10,16 @@ class Game {
   }
 }
 
-chooseGame() {
+pickGame() {
   if(this.gameChoice === 'Classic') {
     this.fighters = ['Rock', 'Paper', 'Scissors ']
   } else if (this.gameChoice === 'Difficult') {
     this.fighters = ['Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha']
   }
+}
+
+pickFighters() {
+
 }
 //two player instances
 //way to keep track of the data for the game board

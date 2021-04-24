@@ -14,19 +14,22 @@
             <h2 class="human-emoji">🧑🏼‍🎤</h2>
             <h3 class="human">Human</h3>
             <h4 class="wins">Wins:placeholder</h4>
-            <button type="button" name="button"></button>
+            <button type="button" name="button">New Game?</button>
         </section>
         <section class="center-board">
           <h1 class="rps-title">Rock, Paper, Scissors</h1>
-          <h2 class="game-fighter-text">Choose your game!</h2>
-          <section class="game-option">
+          <h2 class="choose-game-text" id="chooseGameText">Choose your game!</h2>
+          <h2 class="choose-fighter hidden" id="chooseFighterText">Choose your fighter!</h2>
+          <div>
+            <section class="game-option" id="classicContainer">
             <h3>Classic</h3>
             <p class="classic-rules alt-text">
                 Rock defeats scissors. <br>
                 Paper defeats rock. <br>
                 Scissors defeat paper.<br>
             </p>
-         </section>
+          </section>
+        </div>
           <section class="classic-fighters">
             <img class="rock hidden" src="./assets/the-rock.png" alt="dwayne the rock johnson">
             <img class="tp hidden" src="./assets/toilet-paper.png" alt="toilet paper">
@@ -39,7 +42,7 @@
             <img class="mario hidden" src="./assets/mario.png" alt="mario">
             <img class="piranha hidden" src="./assets/pirhana.png" alt="piranha mario plant">
         </section>
-        <section class="game-option">
+        <section class="game-option" id="difficultContainer">
           <h3>Difficult</h3>
           <p class="difficult-rules alt-text">
               Boo defeats koopa + piranha plant. <br>
@@ -57,8 +60,8 @@
       </section>
       </section>
     </main>
-
-
-
+  <script src="./main.js"></script>
+  <script src="./game.js"></script>
+  <script src="./player.js"></script>
   </body>
   </html>
