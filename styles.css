@@ -44,7 +44,7 @@ body {
   justify-content: space-between;
 } */
 
-.rock {
+/* .rock {
   max-width: 20%;
 }
 
@@ -53,6 +53,10 @@ body {
 }
 
 .scissors {
+  max-width: 20%
+} */
+
+img {
   max-width: 20%
 }
 

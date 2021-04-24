@@ -5,12 +5,16 @@ var chooseFighterText = document.getElementById('chooseFighterText');
 var rock = document.getElementById('rock');
 var tp = document.getElementById('tp');
 var scissors = document.getElementById('scissors');
-var classicFighters = document.getElementById('classicFighters')
+var classicFighters = document.getElementById('classicFighters');
+var difficultFighters = document.getElementById('difficultFighters');
 
 //----------Event Listeners------------//
-classicContainer.addEventListener('click', displayGame)
-difficultContainer.addEventListener('click', displayGame)
-
+classicContainer.addEventListener('click', function() {
+playGame('Classic')})
+difficultContainer.addEventListener('click', function() {
+  playGame('Difficult')
+})
+//-------------Functions--------------//
 function show(element) {
   element.classList.remove('hidden');
 };
@@ -19,12 +23,19 @@ function hide(element) {
   element.classList.add('hidden');
 };
 
-function displayGame() {
+function playGame(type) {
+
   hide(classicContainer)
   hide(difficultContainer)
   hide(chooseGameText)
   show(chooseFighterText)
-  if(classicContainer) {
+  if(type === 'Classic') {
+    game = new Game('Classic')
+    console.log(game)
     show(classicFighters)
+    }
+  if(type === 'Difficult') {
+    game = new Game('Difficult')
+    show(difficultFighters)
   }
-}
+  }

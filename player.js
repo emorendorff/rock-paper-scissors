@@ -18,8 +18,7 @@ class Player {
   }
 }
 
-var playerOne = new Player('Human', '🧑🏼‍🎤')
-var playerTwo = new Player('Computer', '🖥')
+// module.exports = Player 
 // var userChoice = prompt("Do you choose rock, paper or scissor?");
 // var computerChoice = Math.random();
 // if (computerChoice > 0 && computerChoice < 0.33) {

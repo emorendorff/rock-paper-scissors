@@ -1,14 +1,13 @@
-var Player = require(./Player)
+// var Player = require('./Player')
 
 class Game {
   constructor(gameChoice) {
-    this.playerOne = player1;
-    this.playerTwo = new Player('Computer', '🖥');
+    this.playerOne = new Player('Human', '🧑🏼‍🎤')
+    this.playerTwo = new Player('Computer', '🖥')
     this.gameChoice = gameChoice;
     this.humanTurn = true;
     this.fighters = [];
   }
-}
 
 pickGame() {
   if(this.gameChoice === 'Classic') {
@@ -20,7 +19,9 @@ pickGame() {
 
 pickFighters() {
 
+  }
 }
+
 //how the fuck do i link this array to the click images as the data model vs displaying on the dom
 //two player instances
 //way to keep track of the data for the game board
