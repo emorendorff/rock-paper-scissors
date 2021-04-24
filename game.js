@@ -11,9 +11,9 @@ class Game {
 
 pickGame() {
   if(this.gameChoice === 'Classic') {
-    this.fighters = ['Rock', 'Paper', 'Scissors ']
+    this.fighters.push('Rock', 'Paper', 'Scissors ')
   } else if (this.gameChoice === 'Difficult') {
-    this.fighters = ['Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha']
+    this.fighters.push('Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha')
   }
 }
 

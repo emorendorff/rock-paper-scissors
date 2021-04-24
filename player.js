@@ -4,9 +4,6 @@ class Player {
     this.token = token
     this.wins = 0
   }
-  takeTurn() {
-
-  }
 
 
   saveWinsToStorage() {
@@ -18,7 +15,7 @@ class Player {
   }
 }
 
-// module.exports = Player 
+// module.exports = Player
 // var userChoice = prompt("Do you choose rock, paper or scissor?");
 // var computerChoice = Math.random();
 // if (computerChoice > 0 && computerChoice < 0.33) {

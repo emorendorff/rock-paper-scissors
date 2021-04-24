@@ -10,10 +10,10 @@ var difficultFighters = document.getElementById('difficultFighters');
 
 //----------Event Listeners------------//
 classicContainer.addEventListener('click', function() {
-playGame('Classic')})
+playGame('Classic')});
 difficultContainer.addEventListener('click', function() {
   playGame('Difficult')
-})
+});
 //-------------Functions--------------//
 function show(element) {
   element.classList.remove('hidden');
@@ -24,18 +24,19 @@ function hide(element) {
 };
 
 function playGame(type) {
-
   hide(classicContainer)
   hide(difficultContainer)
   hide(chooseGameText)
   show(chooseFighterText)
+
   if(type === 'Classic') {
     game = new Game('Classic')
-    console.log(game)
     show(classicFighters)
+    game.pickGame()
     }
   if(type === 'Difficult') {
     game = new Game('Difficult')
     show(difficultFighters)
+    game.pickGame()
   }
   }
