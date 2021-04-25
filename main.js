@@ -30,13 +30,13 @@ function playGame(type) {
   show(chooseFighterText)
 
   if(type === 'Classic') {
-    game = new Game('Classic')
-    show(classicFighters)
-    game.pickGame()
+      game = new Game('Classic')
+      show(classicFighters)
+      game.pickGame()
     }
   if(type === 'Difficult') {
-    game = new Game('Difficult')
-    show(difficultFighters)
-    game.pickGame()
-  }
+      game = new Game('Difficult')
+      show(difficultFighters)
+      game.pickGame()
+    }
   }

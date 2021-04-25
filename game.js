@@ -5,7 +5,8 @@ class Game {
     this.playerOne = new Player('Human', '🧑🏼‍🎤')
     this.playerTwo = new Player('Computer', '🖥')
     this.gameChoice = gameChoice;
-    this.humanTurn = true;
+    this.computerChoice = null;
+    this.humanChoice = null
     this.fighters = [];
   }
 
@@ -17,11 +18,25 @@ pickGame() {
   }
 }
 
-pickFighters() {
-
-  }
-}
-
+// randomizeFighter() {
+//   var index = Math.floor(Math.random() * this.fighters.length)
+//   this.computerChoice = this.fighters[index]
+// };
+//
+// pickWinner() {
+//   if((this.humanChoice === 'Rock' && this.computerChoice === 'Paper') ||
+//     (this.humanChoice === 'Paper' && this.computerChoice == 'Rock') ||
+//     (this.humanChoice === 'Scissors' && this.computerChoice === 'Paper')) {
+//       this.playerOne.wins += 1;
+//       return true
+//     } else if ((this.computerChoice === 'Rock' && this.computerChoice === 'Paper') ||
+//               (this.computerChoice === 'Paper' && this.computerChoice === 'Rock')
+//               (this.computerChoice === 'Scissors' && thid.computerChoice === 'Paper') {
+//
+//     }
+// }
+// }
+//at the time of find winner, that's when save to local storage and as soon as it displays winner, then retrieveWinsFromStorage
 //how the fuck do i link this array to the click images as the data model vs displaying on the dom
 //two player instances
 //way to keep track of the data for the game board
