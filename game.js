@@ -3,6 +3,8 @@ class Game {
     this.playerOne = new Player('Human', '🧑🏼‍🎤')
     this.playerTwo = new Player('Computer', '🖥')
     this.gameChoice = gameChoice;
+    this.humanTurn = true;
+    this.computerTurn = false;
     this.computerChoice = null;
     this.humanChoice = null
     this.fighters = [];
@@ -44,6 +46,8 @@ pickWinnerClasic() {
         this.drawGame()
     }
   };
+
+
 
 
 }

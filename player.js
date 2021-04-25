@@ -5,6 +5,12 @@ class Player {
     this.wins = 0
   }
 
+  takeTurn() {
+    if(!game.computerTurn) {
+      game.computerTurn = true;
+      game.humanTurn = false;
+    }
+  }
 
   saveWinsToStorage() {
     localStorage.setItem();
@@ -14,15 +20,3 @@ class Player {
     localStorage.getItem()
   };
 }
-
-// module.exports = Player
-// var userChoice = prompt("Do you choose rock, paper or scissor?");
-// var computerChoice = Math.random();
-// if (computerChoice > 0 && computerChoice < 0.33) {
-//   computerChoice = "Rock";
-// } else if (computerChoice > 0.34 && computerChoice < 0.67) {
-//   computerChoice = "Paper";
-// } else {
-//   computerChoice = "Scissor";
-// }
-// console.log(computerChoice);
