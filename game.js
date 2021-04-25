@@ -16,14 +16,31 @@ pickGame() {
   } else if (this.gameChoice === 'Difficult') {
     this.fighters.push('Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha')
   }
-}
+};
 
-// randomizeFighter() {
-//   var index = Math.floor(Math.random() * this.fighters.length)
-//   this.computerChoice = this.fighters[index]
-// };
-//
-// pickWinner() {
+randomizeFighter() {
+  var index = Math.floor(Math.random() * this.fighters.length)
+    this.computerChoice = this.fighters[index]
+  }
+};
+
+drawGame() {
+  if (this.computerChoice === this.humanChoice) {
+    return true;
+  }
+};
+
+fight() {
+  if(this.humanChoice === 'Rock' && this.computerChoice === 'Paper' || this.humanChoice === 'Paper' && this.computerChoice === 'Rock' || this.humanChoice === 'Scissors' && this.computerChoice === 'Paper') {
+      return true;
+  } else {
+      return false;
+  }
+};
+
+
+
+
 //   if((this.humanChoice === 'Rock' && this.computerChoice === 'Paper') ||
 //     (this.humanChoice === 'Paper' && this.computerChoice == 'Rock') ||
 //     (this.humanChoice === 'Scissors' && this.computerChoice === 'Paper')) {
@@ -34,9 +51,6 @@ pickGame() {
 //               (this.computerChoice === 'Scissors' && thid.computerChoice === 'Paper') {
 //
 //     }
-// }
-// }
-//at the time of find winner, that's when save to local storage and as soon as it displays winner, then retrieveWinsFromStorage
 //how the fuck do i link this array to the click images as the data model vs displaying on the dom
 //two player instances
 //way to keep track of the data for the game board
