@@ -14,41 +14,44 @@
             <h2 class="human-emoji">🧑🏼‍🎤</h2>
             <h3 class="human">Human</h3>
             <h4 class="wins">Wins:placeholder</h4>
-            <button type="button" name="button"></button>
+            <button type="button" name="button" class="change-game">Change Game?</button>
         </section>
         <section class="center-board">
+          <section class="heading">
           <h1 class="rps-title">Rock, Paper, Scissors</h1>
-          <h2 class="game-fighter-text">Choose your game!</h2>
-          <section class="game-option">
+          <h2 class="choose-game-text" id="chooseGameText">Choose your game!</h2>
+          <h2 class="choose-fighter hidden" id="chooseFighterText">Choose your fighter!</h2>
+          </section>
+            <section class="game-option" id="classicContainer">
             <h3>Classic</h3>
             <p class="classic-rules alt-text">
                 Rock defeats scissors. <br>
                 Paper defeats rock. <br>
                 Scissors defeat paper.<br>
             </p>
-         </section>
-          <section class="classic-fighters">
-            <img class="rock hidden" src="./assets/the-rock.png" alt="dwayne the rock johnson">
-            <img class="tp hidden" src="./assets/toilet-paper.png" alt="toilet paper">
-            <img class="scissors hidden" src="./assets/scissors.png" alt="scissors">
-          </section>
-          <section class="difficult-fighters">
-            <img class="chomp hidden" src="./assets/chomp.png" alt="mario chomp">
-            <img class="boo hidden" src="./assets/boo.png" alt="mario ghost">
-            <img class="koopa hidden" src="./assets/koopa.png" alt="koopa turtle">
-            <img class="mario hidden" src="./assets/mario.png" alt="mario">
-            <img class="piranha hidden" src="./assets/pirhana.png" alt="piranha mario plant">
-        </section>
-        <section class="game-option">
-          <h3>Difficult</h3>
-          <p class="difficult-rules alt-text">
+            </section>
+            <section class="classic-fighters hidden" id="classicFighters">
+            <img class="rock" id="rock" src="./assets/the-rock.png" alt="dwayne the rock johnson">
+            <img class="tp"id="tp" src="./assets/toilet-paper.png" alt="toilet paper">
+            <img class="scissors" id="scissors" src="./assets/scissors.png" alt="scissors">
+            </section>
+            <section class="difficult-fighters hidden" id="difficultFighters">
+            <img class="chomp" id="chomp" src="./assets/chomp.png" alt="mario chomp">
+            <img class="boo" id="boo" src="./assets/boo.png" alt="mario ghost">
+            <img class="koopa" id="koopa" src="./assets/koopa.png" alt="koopa turtle">
+            <img class="mario" id="mario" src="./assets/mario.png" alt="mario">
+            <img class="piranha" id="piranha" src="./assets/pirhana.png" alt="piranha mario plant">
+            </section>
+            <section class="game-option" id="difficultContainer">
+            <h3>Difficult</h3>
+            <p class="difficult-rules alt-text">
               Boo defeats koopa + piranha plant. <br>
               Mario defeats boo + chompy.<br>
               Koopa defeats Mario + piranha plant.<br>
               Piranha plant defeats Mario + chompy.<br>
               Chompy defeats koopa + boo.<br>
-          </p>
-        </section>
+            </p>
+            </section>
       </section>
       <section class="side">
         <h2 class="computer-emoji">‍🖥</h2>
@@ -57,8 +60,8 @@
       </section>
       </section>
     </main>
-
-
-
+  <script src="./game.js"></script>
+  <script src="./player.js"></script>
+  <script src="./main.js"></script>
   </body>
   </html>
