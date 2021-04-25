@@ -8,6 +8,8 @@ var scissors = document.getElementById('scissors');
 var classicFighters = document.getElementById('classicFighters');
 var difficultFighters = document.getElementById('difficultFighters');
 
+
+
 //----------Event Listeners------------//
 classicContainer.addEventListener('click', function() {
 playGame('Classic')});

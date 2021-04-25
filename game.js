@@ -1,5 +1,3 @@
-// var Player = require('./Player')
-
 class Game {
   constructor(gameChoice) {
     this.playerOne = new Player('Human', '🧑🏼‍🎤')
@@ -21,8 +19,7 @@ pickGame() {
 randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
     this.computerChoice = this.fighters[index]
-  }
-};
+  };
 
 drawGame() {
   if (this.computerChoice === this.humanChoice) {
@@ -30,27 +27,28 @@ drawGame() {
   }
 };
 
-fight() {
+fightClassic() {
   if(this.humanChoice === 'Rock' && this.computerChoice === 'Paper' || this.humanChoice === 'Paper' && this.computerChoice === 'Rock' || this.humanChoice === 'Scissors' && this.computerChoice === 'Paper') {
       return true;
   } else {
       return false;
-  }
-};
+    }
+  };
+
+pickWinnerClasic() {
+    if(this.fightClassic()) {
+      this.playerOne.wins += 1;
+    } else if (!this.fight()) {
+      this.playerTwo.wins += 1;
+    } else {
+        this.drawGame()
+    }
+  };
+}
+
+//in set time out set the value of this.
 
 
-
-
-//   if((this.humanChoice === 'Rock' && this.computerChoice === 'Paper') ||
-//     (this.humanChoice === 'Paper' && this.computerChoice == 'Rock') ||
-//     (this.humanChoice === 'Scissors' && this.computerChoice === 'Paper')) {
-//       this.playerOne.wins += 1;
-//       return true
-//     } else if ((this.computerChoice === 'Rock' && this.computerChoice === 'Paper') ||
-//               (this.computerChoice === 'Paper' && this.computerChoice === 'Rock')
-//               (this.computerChoice === 'Scissors' && thid.computerChoice === 'Paper') {
-//
-//     }
 //how the fuck do i link this array to the click images as the data model vs displaying on the dom
 //two player instances
 //way to keep track of the data for the game board
