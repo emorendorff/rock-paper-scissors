@@ -7,6 +7,11 @@ var tp = document.getElementById('tp');
 var scissors = document.getElementById('scissors');
 var classicFighters = document.getElementById('classicFighters');
 var difficultFighters = document.getElementById('difficultFighters');
+var chompy = document.getElementById('chomp');
+var boo = document.getElementById('boo');
+var koopa = document.getElementById('koopa');
+var mario = document.getElementById('mario');
+var piranha = document.getElementById('piranha');
 
 
 

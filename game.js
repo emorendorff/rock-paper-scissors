@@ -37,13 +37,15 @@ fightClassic() {
 
 pickWinnerClasic() {
     if(this.fightClassic()) {
-      this.playerOne.wins += 1;
+      this.playerOne.wins++;
     } else if (!this.fight()) {
-      this.playerTwo.wins += 1;
+      this.playerTwo.wins++;
     } else {
         this.drawGame()
     }
   };
+
+
 }
 
 //in set time out set the value of this.

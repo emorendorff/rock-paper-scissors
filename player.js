@@ -7,12 +7,12 @@ class Player {
 
 
   saveWinsToStorage() {
-
-  }
+    localStorage.setItem();
+  };
 
   retrieveWinsFromStorage() {
-
-  }
+    localStorage.getItem()
+  };
 }
 
 // module.exports = Player
