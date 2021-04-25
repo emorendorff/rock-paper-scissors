@@ -7,16 +7,18 @@ class Game {
     this.computerTurn = false;
     this.computerChoice = null;
     this.humanChoice = null
-    this.fighters = [];
+    // this.fighters = [];
+    this.fightersClassic = ['Rock', 'Paper', 'Scissors']
+    this.fightersDifficult = ['Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha']
   }
 
-pickGame() {
-  if(this.gameChoice === 'Classic') {
-    this.fighters.push('Rock', 'Paper', 'Scissors ')
-  } else if (this.gameChoice === 'Difficult') {
-    this.fighters.push('Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha')
-  }
-};
+// pickGame() {
+//   if(this.gameChoice === 'Classic') {
+//     this.fighters.push('Rock', 'Paper', 'Scissors')
+//   } else if (this.gameChoice === 'Difficult') {
+//     this.fighters.push('Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha')
+//   }
+// };
 
   randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
@@ -47,6 +49,9 @@ pickGame() {
     }
   };
 
+  resetGameClassic() {
+    displayChooseFighter()
+  };
 
 }
 

@@ -12,15 +12,20 @@ var boo = document.getElementById('boo');
 var koopa = document.getElementById('koopa');
 var mario = document.getElementById('mario');
 var piranha = document.getElementById('piranha');
+var changeGameBtn = document.getElementById('changeGame')
 
 
 
-//----------Event Listeners------------//
+//----------Event Handlers------------//
 classicContainer.addEventListener('click', function() {
 playGame('Classic')});
+
 difficultContainer.addEventListener('click', function() {
   playGame('Difficult')
 });
+
+changeGameBtn.addEventListener('click', changeGame)
+
 //-------------Functions--------------//
 function show(element) {
   element.classList.remove('hidden');
@@ -35,6 +40,7 @@ function displayChooseFighter() {
   hide(difficultContainer)
   hide(chooseGameText)
   show(chooseFighterText)
+  show(changeGameBtn)
 }
 
 function changeGame() {
@@ -42,6 +48,9 @@ function changeGame() {
   show(chooseGameText)
   hide(changeGameBtn)
   show(classicContainer)
+  show(difficultContainer)
+  hide(classicFighters)
+  hide(difficultFighters)
 }
 
 function playGame(type) {
@@ -50,11 +59,11 @@ function playGame(type) {
   if(type === 'Classic') {
       game = new Game('Classic')
       show(classicFighters)
-      game.pickGame()
+      // game.pickGame()
     }
   if(type === 'Difficult') {
       game = new Game('Difficult')
       show(difficultFighters)
-      game.pickGame()
+      // game.pickGame()
     }
   }
