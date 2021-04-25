@@ -30,11 +30,22 @@ function hide(element) {
   element.classList.add('hidden');
 };
 
-function playGame(type) {
+function displayChooseFighter() {
   hide(classicContainer)
   hide(difficultContainer)
   hide(chooseGameText)
   show(chooseFighterText)
+}
+
+function changeGame() {
+  hide(chooseFighterText)
+  show(chooseGameText)
+  hide(changeGameBtn)
+  show(classicContainer)
+}
+
+function playGame(type) {
+  displayChooseFighter()
 
   if(type === 'Classic') {
       game = new Game('Classic')
