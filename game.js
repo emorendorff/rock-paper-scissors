@@ -18,18 +18,18 @@ pickGame() {
   }
 };
 
-randomizeFighter() {
+  randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
     this.computerChoice = this.fighters[index]
   };
 
-drawGame() {
+  drawGame() {
   if (this.computerChoice === this.humanChoice) {
     return true;
   }
 };
 
-fightClassic() {
+  fightClassic() {
   if(this.humanChoice === 'Rock' && this.computerChoice === 'Paper' || this.humanChoice === 'Paper' && this.computerChoice === 'Rock' || this.humanChoice === 'Scissors' && this.computerChoice === 'Paper') {
       return true;
   } else {
@@ -37,7 +37,7 @@ fightClassic() {
     }
   };
 
-pickWinnerClasic() {
+  pickWinnerClasic() {
     if(this.fightClassic()) {
       this.playerOne.wins++;
     } else if (!this.fight()) {
@@ -46,8 +46,6 @@ pickWinnerClasic() {
         this.drawGame()
     }
   };
-
-
 
 
 }

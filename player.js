@@ -9,6 +9,9 @@ class Player {
     if(!game.computerTurn) {
       game.computerTurn = true;
       game.humanTurn = false;
+    } else {
+      game.humanTurn
+      !game.computerTurn
     }
   }
 
