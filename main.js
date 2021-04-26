@@ -5,6 +5,8 @@ var chooseFighterText = document.getElementById('chooseFighterText');
 var classicFighters = document.getElementById('classicFighters');
 var difficultFighters = document.getElementById('difficultFighters');
 var displayFightersSection = document.getElementById('displayFighters');
+var winsHuman = document.getElementById('zeroHuman');
+var winsComputer = document.getElementById('zeroComp')
 var rock = document.getElementById('rock');
 var tp = document.getElementById('tp');
 var scissors = document.getElementById('scissors');
@@ -53,24 +55,58 @@ function playGame(type) {
   function chooseFighter(event) {
     if(event.target.id === 'rock') {
       game.humanChoice = 'rock'
-    }
+    };
     if (event.target.id === 'tp') {
       game.humanChoice = 'tp'
-    }
+    };
     if (event.target.id === 'scissors') {
       game.humanChoice = 'scissors'
+    };
+    if (event.target.id === 'boo') {
+      game.humanChoice = 'boo'
+    };
+    if (event.target.id === 'chompy') {
+      game.humanChoice = 'chompy'
+    };
+    if (event.target.id === 'koopa') {
+      game.humanChoice = 'koopa'
+    };
+    if (event.target.id === 'mario') {
+      gameChoice.humanChoice = 'mario'
+    };
+    if (event.target.id === 'piranha') {
+      gameChoice.humanChoice = 'pirhana'
     }
     game.randomizeFighter()
     hide(classicFighters)
-    displayFighters(game.humanChoice, game.computerChoice);
+    displayFighters(game.humanChoice, game.computerChoice)
+    declareWinner()
+    displayWins()
   };
 
-  function displayFighters (humanChoice, computerChoice) {
+  function displayFighters(humanChoice, computerChoice) {
     displayFightersSection.innerHTML += `
       <img id=${humanChoice} src="assets/${humanChoice}.png">
       <img id=${computerChoice} src="assets/${computerChoice}.png">
     `
   };
+
+  function declareWinner() {
+    if (game.fightClassic()) {
+      chooseFighterText.innerText = 'HUMAN WINS THIS ROUND!'
+    } else if (game.drawGame()) {
+      chooseFighterText.innerText = 'DRAW! PLAY AGAIN!'
+    } else {
+      chooseFighterText.innerText = 'COMPUTER WINS THIS ROUND'
+    }
+    game.pickWinnerClasic()
+    displayWins()
+  };
+
+  function displayWins() {
+    winsHuman.innerText = `${game.playerOne.wins}`
+    winsComputer.innerText = `${game.playerTwo.wins}`
+  }
 
   function show(element) {
     element.classList.remove('hidden');

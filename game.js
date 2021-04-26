@@ -31,7 +31,7 @@ pickGame() {
 };
 
   fightClassic() {
-  if (this.humanChoice === 'rock' && this.computerChoice === 'tp' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
+  if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
       return true;
   } else {
       return false;
@@ -41,7 +41,7 @@ pickGame() {
   pickWinnerClasic() {
     if (this.fightClassic()) {
       this.playerOne.wins++;
-    } else if (!this.fight()) {
+    } else if (!this.fightClassic()) {
       this.playerTwo.wins++;
     } else {
         this.drawGame()
