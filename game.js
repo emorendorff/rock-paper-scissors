@@ -30,6 +30,7 @@ pickGame() {
   }
 };
 
+
   fightClassic() {
   if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
       return true;
@@ -38,17 +39,43 @@ pickGame() {
     }
   };
 
+
+  fightDifficult() {
+    if ((this.humanChoice === 'boo' && this.computerChoice === 'koopa' || this.computerChoice === 'piranha') ||
+        (this.humanChoice === 'mario' && this.computerChoice === 'boo' || this.computerChoice === 'chompy') ||
+        (this.humanChoice === 'koopa' && this.computerChoice === 'piranha' || this.computerChoice === 'mario')||
+        (this.humanChoice === 'piranha' && this.computerChoice === 'mario' || this.computerChoice === 'chompy') ||
+        (this.humanChoice === 'chompy' && this.computerChoice === 'koopa' || this.computerChoice === 'boo'))
+        {
+            return true;
+    } else {
+            return false;
+    }
+  };
+
   pickWinnerClasic() {
     if (this.fightClassic()) {
-      this.playerOne.wins++;
+        this.playerOne.wins++;
+        this.playerOne.saveWinsToStorage()
     } else if (!this.fightClassic()) {
-      this.playerTwo.wins++;
+        this.playerTwo.wins++;
+        this.playerTwo.saveWinsToStorage()
     } else {
         this.drawGame()
     }
   };
 
-  // setTimeout(game.resetBoard, 3000){}
+  pickWinnerDifficult() {
+    if (this.fightDifficult()) {
+      this.playerOne.wins++;
+      this.playerOne.saveWinsToStorage()
+    } else if (!this.fightDifficult()) {
+      this.playerTwo.wins++;
+      this.playerTwo.saveWinsToStorage()
+    } else {
+        this.drawGame()
+    }
+  };
 
   resetGame() {
     setTimeout(function() {
@@ -56,20 +83,7 @@ pickGame() {
       hide(displayFightersSection)
       show(chooseGameText)
       show(classicFighters)
-    }, 1000)
+    }, 2000)
     // displayChooseFighter()
   };
-
 }
-
-//in set time out set the value of this.
-
-
-//how the fuck do i link this array to the click images as the data model vs displaying on the dom
-//two player instances
-//way to keep track of the data for the game board
-//way to keep track of the selected game type
-//way to keep tract of which players turn it is
-//a way to check the games board data for win conditions
-//way to detect when a gmae is a draw
-//way to reset the Game's board to begin a new game

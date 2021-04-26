@@ -16,10 +16,11 @@ class Player {
   }
 
   saveWinsToStorage() {
-    localStorage.setItem();
+    localStorage.setItem(`${this.name}`, JSON.stringify(this.wins));
   };
 
   retrieveWinsFromStorage() {
-    localStorage.getItem()
+    var wins = JSON.parse(localStorage.getItem(`${this.name}`)) || 0;
+    return wins;
   };
 }

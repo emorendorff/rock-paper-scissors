@@ -109,6 +109,11 @@ function playGame(type) {
     winsComputer.innerText = `${game.playerTwo.wins}`
   }
 
+  function retrieveWins() {
+    winsHuman.innerText = game.playerOne.retrieveWinsFromStorage();
+    winsComputer.innerText = game.playerTwo.retrieveWinsFromStorage();
+  }
+
   function show(element) {
     element.classList.remove('hidden');
   };
