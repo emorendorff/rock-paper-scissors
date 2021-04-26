@@ -12,7 +12,7 @@ class Game {
 
 pickGame() {
   if (this.gameChoice === 'Classic') {
-   this.fighters = ['rock', 'paper', 'scissors']
+   this.fighters = ['rock', 'tp', 'scissors']
   } else if (this.gameChoice === 'Difficult') {
     this.fighters = ['boo', 'chompy', 'koopa', 'mario', 'piranha']
   }
@@ -21,6 +21,7 @@ pickGame() {
   randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
     this.computerChoice = this.fighters[index]
+    return this.computerChoice
   };
 
   drawGame() {
@@ -30,7 +31,7 @@ pickGame() {
 };
 
   fightClassic() {
-  if (this.humanChoice === 'rock' && this.computerChoice === 'paper' || this.humanChoice === 'paper' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'paper') {
+  if (this.humanChoice === 'rock' && this.computerChoice === 'tp' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
       return true;
   } else {
       return false;

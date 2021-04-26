@@ -4,7 +4,7 @@ var chooseGameText = document.getElementById('chooseGameText');
 var chooseFighterText = document.getElementById('chooseFighterText');
 var classicFighters = document.getElementById('classicFighters');
 var difficultFighters = document.getElementById('difficultFighters');
-var displayFighters = document.getElementById('displayFighters');
+var displayFightersSection = document.getElementById('displayFighters');
 var rock = document.getElementById('rock');
 var tp = document.getElementById('tp');
 var scissors = document.getElementById('scissors');
@@ -53,20 +53,24 @@ function playGame(type) {
   function chooseFighter(event) {
     if(event.target.id === 'rock') {
       game.humanChoice = 'rock'
-      game.randomizeFighter()
-      hide(classicContainer)
-      displayFighters(game.humanChoice, game.computerChoice);
     }
+    if (event.target.id === 'tp') {
+      game.humanChoice = 'tp'
+    }
+    if (event.target.id === 'scissors') {
+      game.humanChoice = 'scissors'
+    }
+    game.randomizeFighter()
+    hide(classicFighters)
+    displayFighters(game.humanChoice, game.computerChoice);
   };
 
   function displayFighters (humanChoice, computerChoice) {
-    displayFighters.innerHTML += `
-    <section class="display-fighters" id="displayFighters">
-      <img class="${humanChoice}" id="${humanChoice}" src="./assets/${humanChoice}.png">
-      <img class="${computerChoice}"id="${computerChoice}" src="./assets/${computerChoice}.png">
-    </section>
+    displayFightersSection.innerHTML += `
+      <img id=${humanChoice} src="assets/${humanChoice}.png">
+      <img id=${computerChoice} src="assets/${computerChoice}.png">
     `
-  }
+  };
 
   function show(element) {
     element.classList.remove('hidden');
