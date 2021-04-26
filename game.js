@@ -53,7 +53,7 @@ pickGame() {
     }
   };
 
-  pickWinnerClasic() {
+  pickWinnerClassic() {
     if (this.fightClassic()) {
         this.playerOne.wins++;
         this.playerOne.saveWinsToStorage()
@@ -78,12 +78,10 @@ pickGame() {
   };
 
   resetGame() {
-    setTimeout(function() {
-      hide(chooseFighterText)
-      hide(displayFightersSection)
-      show(chooseGameText)
-      show(classicFighters)
-    }, 2000)
-    // displayChooseFighter()
-  };
+    // this.fighters = [];
+    this.computerChoice = null;
+    this.humanChoice = null;
+  }
+
+
 }

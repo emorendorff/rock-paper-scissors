@@ -21,23 +21,25 @@ var changeGameBtn = document.getElementById('changeGame')
 
 //----------Event Handlers------------//
 classicContainer.addEventListener('click', function() {
-playGame('Classic')});
+newGame('Classic')});
 
 difficultContainer.addEventListener('click', function() {
-  playGame('Difficult')
+  newGame('Difficult')
 });
 
 changeGameBtn.addEventListener('click', changeGame);
 
-classicFighters.addEventListener('click', function() {
-  chooseFighter(event)
-});
+classicFighters.addEventListener('click', chooseFighter);
+
+// difficultFighters.addEventListener('click', function() {
+//   chooseFighter(event)
+// });
 
 
 //-------------Functions--------------//
 
 
-function playGame(type) {
+function newGame(type) {
   displayChooseFighter()
 
   if(type === 'Classic') {
@@ -52,40 +54,43 @@ function playGame(type) {
     }
   };
 
-  function chooseFighter(event) {
-    if(event.target.id === 'rock') {
+function chooseFighter() {
+  if(event.target.id === 'rock') {
       game.humanChoice = 'rock'
     };
-    if (event.target.id === 'tp') {
+  if (event.target.id === 'tp') {
       game.humanChoice = 'tp'
     };
-    if (event.target.id === 'scissors') {
+  if (event.target.id === 'scissors') {
       game.humanChoice = 'scissors'
     };
-    if (event.target.id === 'boo') {
+  if (event.target.id === 'boo') {
       game.humanChoice = 'boo'
     };
-    if (event.target.id === 'chompy') {
+  if (event.target.id === 'chompy') {
       game.humanChoice = 'chompy'
     };
-    if (event.target.id === 'koopa') {
+  if (event.target.id === 'koopa') {
       game.humanChoice = 'koopa'
     };
-    if (event.target.id === 'mario') {
+  if (event.target.id === 'mario') {
       gameChoice.humanChoice = 'mario'
     };
-    if (event.target.id === 'piranha') {
-      gameChoice.humanChoice = 'pirhana'
+  if (event.target.id === 'piranha') {
+    gameChoice.humanChoice = 'piranha'
     }
     game.randomizeFighter()
     hide(classicFighters)
+    show(displayFightersSection)
     displayFighters(game.humanChoice, game.computerChoice)
     declareWinner()
     displayWins()
-    game.resetGame()
+    resetAll()
   };
 
   function displayFighters(humanChoice, computerChoice) {
+    hide(classicFighters)
+    displayFightersSection.innerHTML = ''
     displayFightersSection.innerHTML += `
       <img id=${humanChoice} src="assets/${humanChoice}.png">
       <img id=${computerChoice} src="assets/${computerChoice}.png">
@@ -100,13 +105,26 @@ function playGame(type) {
     } else {
       chooseFighterText.innerText = 'COMPUTER WINS THIS ROUND'
     }
-    game.pickWinnerClasic()
+    game.pickWinnerClassic()
     displayWins()
   };
 
   function displayWins() {
     winsHuman.innerText = `${game.playerOne.wins}`
     winsComputer.innerText = `${game.playerTwo.wins}`
+  }
+
+  function resetAll() {
+    game.resetGame()
+    window.setTimeout(returnGameBoard, 1500)
+  };
+
+  function returnGameBoard() {
+    show(changeGameBtn)
+    displayChooseFighter()
+    hide(displayFightersSection)
+    show(classicFighters)
+    chooseFighterText.innerText = 'Choose your fighter!'
   }
 
   function retrieveWins() {
@@ -127,7 +145,6 @@ function playGame(type) {
     hide(difficultContainer)
     hide(chooseGameText)
     show(chooseFighterText)
-    show(changeGameBtn)
   };
 
   function changeGame() {
