@@ -13,7 +13,7 @@
         <section class="side">
             <h2 class="human-emoji">🧑🏼‍🎤</h2>
             <h3 class="human">Human</h3>
-            <h4 class="wins">Wins:placeholder</h4>
+            <h4 class="wins">Wins:<span class="zero" id="zeroHuman">0</span></h4>
             <button type="button" name="button" class="change-game hidden" id="changeGame">Change Game?</button>
         </section>
         <section class="center-board">
@@ -30,17 +30,19 @@
                 Scissors defeat paper.<br>
             </p>
             </section>
+            <section class="display-fighters" id="displayFighters">
+            </section>
             <section class="classic-fighters hidden" id="classicFighters">
-            <img class="rock" id="rock" src="./assets/the-rock.png" alt="dwayne the rock johnson">
-            <img class="tp"id="tp" src="./assets/toilet-paper.png" alt="toilet paper">
-            <img class="scissors" id="scissors" src="./assets/scissors.png" alt="scissors">
+              <img class="rock" id="rock" src="./assets/the-rock.png" alt="dwayne the rock johnson">
+              <img class="tp"id="tp" src="./assets/toilet-paper.png" alt="toilet paper">
+              <img class="scissors" id="scissors" src="./assets/scissors.png" alt="scissors">
             </section>
             <section class="difficult-fighters hidden" id="difficultFighters">
-            <img class="chomp" id="chomp" src="./assets/chomp.png" alt="mario chomp">
-            <img class="boo" id="boo" src="./assets/boo.png" alt="mario ghost">
-            <img class="koopa" id="koopa" src="./assets/koopa.png" alt="koopa turtle">
-            <img class="mario" id="mario" src="./assets/mario.png" alt="mario">
-            <img class="piranha" id="piranha" src="./assets/pirhana.png" alt="piranha mario plant">
+              <img class="chomp" id="chomp" src="./assets/chomp.png" alt="mario chomp">
+              <img class="boo" id="boo" src="./assets/boo.png" alt="mario ghost">
+              <img class="koopa" id="koopa" src="./assets/koopa.png" alt="koopa turtle">
+              <img class="mario" id="mario" src="./assets/mario.png" alt="mario">
+              <img class="piranha" id="piranha" src="./assets/pirhana.png" alt="piranha mario plant">
             </section>
             <section class="game-option" id="difficultContainer">
             <h3>Difficult</h3>
@@ -56,7 +58,7 @@
       <section class="side">
         <h2 class="computer-emoji">‍🖥</h2>
         <h3 class="computer">Computer</h3>
-        <h4 class="wins">Wins:placeholder</h4>
+        <h4 class="wins">Wins:<span class="zero-comp" id="zeroComp">0</span></h4>
       </section>
       </section>
     </main>

@@ -7,18 +7,16 @@ class Game {
     this.computerTurn = false;
     this.computerChoice = null;
     this.humanChoice = null
-    // this.fighters = [];
-    this.fightersClassic = ['Rock', 'Paper', 'Scissors']
-    this.fightersDifficult = ['Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha']
+    this.fighters = [];
   }
 
-// pickGame() {
-//   if(this.gameChoice === 'Classic') {
-//     this.fighters.push('Rock', 'Paper', 'Scissors')
-//   } else if (this.gameChoice === 'Difficult') {
-//     this.fighters.push('Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha')
-//   }
-// };
+pickGame() {
+  if (this.gameChoice === 'Classic') {
+   this.fighters = ['rock', 'paper', 'scissors']
+  } else if (this.gameChoice === 'Difficult') {
+    this.fighters = ['boo', 'chompy', 'koopa', 'mario', 'piranha']
+  }
+};
 
   randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
@@ -32,7 +30,7 @@ class Game {
 };
 
   fightClassic() {
-  if(this.humanChoice === 'Rock' && this.computerChoice === 'Paper' || this.humanChoice === 'Paper' && this.computerChoice === 'Rock' || this.humanChoice === 'Scissors' && this.computerChoice === 'Paper') {
+  if (this.humanChoice === 'rock' && this.computerChoice === 'paper' || this.humanChoice === 'paper' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'paper') {
       return true;
   } else {
       return false;
@@ -40,7 +38,7 @@ class Game {
   };
 
   pickWinnerClasic() {
-    if(this.fightClassic()) {
+    if (this.fightClassic()) {
       this.playerOne.wins++;
     } else if (!this.fight()) {
       this.playerTwo.wins++;
@@ -48,6 +46,8 @@ class Game {
         this.drawGame()
     }
   };
+
+  // setTimeout(game.resetBoard, 3000){}
 
   resetGameClassic() {
     displayChooseFighter()
