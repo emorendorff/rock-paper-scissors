@@ -82,6 +82,7 @@ function playGame(type) {
     displayFighters(game.humanChoice, game.computerChoice)
     declareWinner()
     displayWins()
+    game.resetGame()
   };
 
   function displayFighters(humanChoice, computerChoice) {

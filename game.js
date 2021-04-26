@@ -50,8 +50,14 @@ pickGame() {
 
   // setTimeout(game.resetBoard, 3000){}
 
-  resetGameClassic() {
-    displayChooseFighter()
+  resetGame() {
+    setTimeout(function() {
+      hide(chooseFighterText)
+      hide(displayFightersSection)
+      show(chooseGameText)
+      show(classicFighters)
+    }, 1000)
+    // displayChooseFighter()
   };
 
 }
