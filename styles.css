@@ -1,25 +1,11 @@
-body {
-  margin: 0;
-  background-color: #A0ADFF;
-  font-family: 'Press Start 2P';
-}
-
 .alt-text {
   font-family: 'Nunito', sans-serif;
 }
 
- .main-page {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.display-fighters {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center
+body {
+  margin: 0;
+  background-color: #A0ADFF;
+  font-family: 'Press Start 2P';
 }
 
 .center-board {
@@ -31,31 +17,59 @@ body {
   height: 100vh;
 }
 
-.side {
-  background-color: #DC5A17;
-  height: 100vh;
-  width: 20%
+.change-game {
+  margin-top: 40%;
+  border-radius: 5%;
+  border: none;
+  height: 8vh;
+  width: 15vw;
+  font-size: 18px;
+  background-color: white;
+  box-shadow: 10px 5px 5px black;
+  font-family: 'Press Start 2P';
+}
+
+.change-game:hover {
+  background-color: #FBC27D;
 }
 
 .game-option {
   text-align: center;
   background-color: #DE5818;
+  box-shadow: 10px 5px 5px black;
   width: 15vw;
 }
 
 .game-option:hover {
-  background-color: #FBC27D
-}
-
-.change-game {
-  border-radius: 10%;
-  background-color: #FBC27D
-}
-
-img {
-  max-width: 20%
+  background-color: #FBC27D;
 }
 
 .hidden {
   display: none;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+img:hover {
+  background-color: #FBC27D;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
+.main-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.side {
+  background-color: #DC5A17;
+  height: 100vh;
+  width: 20%;
 }
