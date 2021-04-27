@@ -8,11 +8,18 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
- .main-page{
+ .main-page {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+}
+
+.display-fighters {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center
 }
 
 .center-board {
@@ -20,14 +27,14 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  width: 74%;
+  width: 60%;
   height: 100vh;
 }
 
 .side {
   background-color: #DC5A17;
   height: 100vh;
-  width: 13%
+  width: 20%
 }
 
 .game-option {
@@ -44,30 +51,6 @@ body {
   border-radius: 10%;
   background-color: #FBC27D
 }
-
-/* .heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-/* .classic-fighters {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-} */
-
-/* .rock {
-  max-width: 20%;
-}
-
-.tp {
-  max-width: 20%;
-}
-
-.scissors {
-  max-width: 20%
-} */
 
 img {
   max-width: 20%

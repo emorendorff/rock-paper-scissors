@@ -5,22 +5,23 @@ class Game {
     this.gameChoice = gameChoice;
     this.humanTurn = true;
     this.computerTurn = false;
-    this.computerChoice = null;
+    this.computerChoice = null
     this.humanChoice = null
     this.fighters = [];
   }
 
 pickGame() {
-  if(this.gameChoice === 'Classic') {
-    this.fighters.push('Rock', 'Paper', 'Scissors ')
+  if (this.gameChoice === 'Classic') {
+   this.fighters = ['rock', 'tp', 'scissors']
   } else if (this.gameChoice === 'Difficult') {
-    this.fighters.push('Boo', 'Chompy', 'Koopa', 'Mario', 'Piranha')
+    this.fighters = ['boo', 'chompy', 'koopa', 'mario', 'piranha']
   }
 };
 
   randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
     this.computerChoice = this.fighters[index]
+    return this.computerChoice
   };
 
   drawGame() {
@@ -30,34 +31,76 @@ pickGame() {
 };
 
   fightClassic() {
-  if(this.humanChoice === 'Rock' && this.computerChoice === 'Paper' || this.humanChoice === 'Paper' && this.computerChoice === 'Rock' || this.humanChoice === 'Scissors' && this.computerChoice === 'Paper') {
+    this.playerOne.wins = this.playerOne.retrieveWinsFromStorage()
+    this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage()
+  if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
+    this.playerOne.wins+= 1;
+    this.playerOne.saveWinsToStorage()
       return true;
-  } else {
+  } else if (this.drawGame()) {
       return false;
+    } else {
+      this.playerTwo.wins+= 1;
+      this.playerTwo.saveWinsToStorage()
+        return false;
     }
   };
 
-  pickWinnerClasic() {
-    if(this.fightClassic()) {
-      this.playerOne.wins++;
-    } else if (!this.fight()) {
-      this.playerTwo.wins++;
-    } else {
-        this.drawGame()
+
+  fightDifficult() {
+    this.playerOne.wins = this.playerOne.retrieveWinsFromStorage()
+    this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage()
+    
+    if ((this.humanChoice === 'boo' && (this.computerChoice === 'koopa' || this.computerChoice === 'piranha')) ||
+        (this.humanChoice === 'mario' && (this.computerChoice === 'boo' || this.computerChoice === 'chompy')) ||
+        (this.humanChoice === 'koopa' && (this.computerChoice === 'piranha' || this.computerChoice === 'mario'))||
+        (this.humanChoice === 'piranha' && (this.computerChoice === 'mario' || this.computerChoice === 'chompy')) ||
+        (this.humanChoice === 'chompy' && (this.computerChoice === 'koopa' || this.computerChoice === 'boo')))
+        {
+          this.playerOne.wins+= 1;
+          this.playerOne.saveWinsToStorage()
+            return true;
+        }
+      else if (this.drawGame()) {
+            return false;
+        } else {
+            this.playerTwo.wins+= 1;
+            this.playerTwo.saveWinsToStorage()
+            return false;
     }
   };
+
+  // pickWinnerClassic() {
+  //   if (this.fightClassic()) {
+  //       this.playerOne.wins+= 1;
+  //       this.playerOne.saveWinsToStorage()
+  //   } else if (!this.fightClassic()) {
+  //       this.playerTwo.wins+= 1;
+  //       this.playerTwo.saveWinsToStorage()
+  //   } else {
+  //       this.drawGame()
+  //   }
+  // };
+  //
+  // pickWinnerDifficult() {
+  //   if (this.fightDifficult()) {
+  //     this.playerOne.wins+= 1;
+  //     this.playerOne.saveWinsToStorage()
+  //   } else if (!this.fightDifficult()) {
+  //     this.playerTwo.wins+= 1;
+  //     this.playerTwo.saveWinsToStorage()
+  //   } else {
+  //       this.drawGame()
+  //   }
+  // };
+
+  resetGame() {
+    this.humanTurn = false;
+    this.computerChoice = true;
+    // this.fighters = [];
+    this.computerChoice = null;
+    this.humanChoice = null;
+  }
 
 
 }
-
-//in set time out set the value of this.
-
-
-//how the fuck do i link this array to the click images as the data model vs displaying on the dom
-//two player instances
-//way to keep track of the data for the game board
-//way to keep track of the selected game type
-//way to keep tract of which players turn it is
-//a way to check the games board data for win conditions
-//way to detect when a gmae is a draw
-//way to reset the Game's board to begin a new game
