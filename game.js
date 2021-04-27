@@ -5,7 +5,7 @@ class Game {
     this.gameChoice = gameChoice;
     this.humanTurn = true;
     this.computerTurn = false;
-    this.computerChoice = null;
+    this.computerChoice = null
     this.humanChoice = null
     this.fighters = [];
   }
@@ -30,35 +30,48 @@ pickGame() {
   }
 };
 
-
   fightClassic() {
   if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
+    this.playerOne.wins+= 1;
+    this.playerOne.saveWinsToStorage()
       return true;
-  } else {
+  } else if (this.drawGame()) {
       return false;
+    } else {
+      this.playerTwo.wins+= 1;
+      this.playerTwo.saveWinsToStorage()
+        return false;
     }
   };
 
 
   fightDifficult() {
-    if ((this.humanChoice === 'boo' && this.computerChoice === 'koopa' || this.computerChoice === 'piranha') ||
-        (this.humanChoice === 'mario' && this.computerChoice === 'boo' || this.computerChoice === 'chompy') ||
-        (this.humanChoice === 'koopa' && this.computerChoice === 'piranha' || this.computerChoice === 'mario')||
-        (this.humanChoice === 'piranha' && this.computerChoice === 'mario' || this.computerChoice === 'chompy') ||
-        (this.humanChoice === 'chompy' && this.computerChoice === 'koopa' || this.computerChoice === 'boo'))
+    if ((this.humanChoice === 'boo' && (this.computerChoice === 'koopa' || this.computerChoice === 'piranha')) ||
+        (this.humanChoice === 'mario' && (this.computerChoice === 'boo' || this.computerChoice === 'chompy')) ||
+        (this.humanChoice === 'koopa' && (this.computerChoice === 'piranha' || this.computerChoice === 'mario'))||
+        (this.humanChoice === 'piranha' && (this.computerChoice === 'mario' || this.computerChoice === 'chompy')) ||
+        (this.humanChoice === 'chompy' && (this.computerChoice === 'koopa' || this.computerChoice === 'boo')))
         {
+          this.playerOne.wins+= 1;
+          this.playerOne.saveWinsToStorage()
             return true;
-    } else {
+        }
+      else if (this.drawGame()) {
+            return false;
+
+          } else {
+            this.playerTwo.wins+= 1;
+            this.playerTwo.saveWinsToStorage()
             return false;
     }
   };
 
   pickWinnerClassic() {
     if (this.fightClassic()) {
-        this.playerOne.wins++;
+        this.playerOne.wins+= 1;
         this.playerOne.saveWinsToStorage()
     } else if (!this.fightClassic()) {
-        this.playerTwo.wins++;
+        this.playerTwo.wins+= 1;
         this.playerTwo.saveWinsToStorage()
     } else {
         this.drawGame()
@@ -67,10 +80,10 @@ pickGame() {
 
   pickWinnerDifficult() {
     if (this.fightDifficult()) {
-      this.playerOne.wins++;
+      this.playerOne.wins+= 1;
       this.playerOne.saveWinsToStorage()
     } else if (!this.fightDifficult()) {
-      this.playerTwo.wins++;
+      this.playerTwo.wins+= 1;
       this.playerTwo.saveWinsToStorage()
     } else {
         this.drawGame()
@@ -78,6 +91,8 @@ pickGame() {
   };
 
   resetGame() {
+    this.humanTurn = false;
+    this.computerChoice = true;
     // this.fighters = [];
     this.computerChoice = null;
     this.humanChoice = null;
