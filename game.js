@@ -29,24 +29,24 @@ pickGame() {
 };
 
   fightClassic() {
-    this.playerOne.wins = this.playerOne.retrieveWinsFromStorage()
-    this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage()
+    this.playerOne.wins = this.playerOne.retrieveWinsFromStorage();
+    this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage();
   if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
     this.playerOne.wins+= 1;
-    this.playerOne.saveWinsToStorage()
+    this.playerOne.saveWinsToStorage();
       return true;
   } else if (this.drawGame()) {
       return false;
     } else {
       this.playerTwo.wins+= 1;
-      this.playerTwo.saveWinsToStorage()
+      this.playerTwo.saveWinsToStorage();
         return false;
     }
   };
 
   fightDifficult() {
-    this.playerOne.wins = this.playerOne.retrieveWinsFromStorage()
-    this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage()
+    this.playerOne.wins = this.playerOne.retrieveWinsFromStorage();
+    this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage();
 
     if ((this.humanChoice === 'boo' && (this.computerChoice === 'koopa' || this.computerChoice === 'piranha')) ||
         (this.humanChoice === 'mario' && (this.computerChoice === 'boo' || this.computerChoice === 'chompy')) ||
