@@ -19,7 +19,7 @@ pickGame() {
   randomizeFighter() {
   var index = Math.floor(Math.random() * this.fighters.length)
     this.computerChoice = this.fighters[index]
-    return this.computerChoice
+    return this.computerChoice;
   };
 
   drawGame() {
@@ -31,6 +31,7 @@ pickGame() {
   fightClassic() {
     this.playerOne.wins = this.playerOne.retrieveWinsFromStorage();
     this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage();
+    
   if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
     this.playerOne.wins+= 1;
     this.playerOne.saveWinsToStorage();
@@ -55,7 +56,7 @@ pickGame() {
         (this.humanChoice === 'chompy' && (this.computerChoice === 'koopa' || this.computerChoice === 'boo')))
         {
           this.playerOne.wins+= 1;
-          this.playerOne.saveWinsToStorage()
+          this.playerOne.saveWinsToStorage();
             return true;
         }
       else if (this.drawGame()) {

@@ -20,8 +20,8 @@ var changeGameBtn = document.getElementById('changeGame')
 var game = new Game();
 
 //----------Event Handlers------------//
-classicContainer.addEventListener('click', newGame)
-difficultContainer.addEventListener('click', newGame)
+classicContainer.addEventListener('click', newGame);
+difficultContainer.addEventListener('click', newGame);
 changeGameBtn.addEventListener('click', changeGame);
 classicFighters.addEventListener('click', chooseFighterClassic);
 difficultFighters.addEventListener('click', chooseFighterDifficult);
@@ -29,13 +29,13 @@ window.addEventListener('load', retrieveWins);
 
 //-------------Functions--------------//
 function newGame() {
-  if(event.target.id === 'Classic') {
+  if (event.target.id === 'Classic') {
       game.gameChoice = 'Classic'
       game.pickGame()
       show(classicFighters)
       displayChooseFighter()
     };
-  if(event.target.id === 'Difficult') {
+  if (event.target.id === 'Difficult') {
       game.gameChoice = 'Difficult'
       game.pickGame()
       show(difficultFighters)
@@ -44,7 +44,7 @@ function newGame() {
   };
 
 function chooseFighterClassic() {
-  if(event.target.id === 'rock') {
+  if (event.target.id === 'rock') {
       game.humanChoice = 'rock'
     };
   if (event.target.id === 'tp') {
@@ -110,7 +110,8 @@ function chooseFighterClassic() {
     };
     displayWins();
   };
-function declareDifficultWinner() {
+
+  function declareDifficultWinner() {
     if (game.fightDifficult()) {
       chooseFighterText.innerText = 'HUMAN WINS THIS ROUND!'
     } else if (game.drawGame()) {
