@@ -171,4 +171,5 @@ function declareDifficultWinner() {
     show(chooseGameText);
     show(classicContainer);
     show(difficultContainer);
+    game.resetArray()
   };

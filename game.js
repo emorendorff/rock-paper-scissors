@@ -3,8 +3,6 @@ class Game {
     this.playerOne = new Player('Human', '🧑🏼‍🎤')
     this.playerTwo = new Player('Computer', '🖥')
     this.gameChoice = gameChoice;
-    // this.humanTurn = true;
-    // this.computerTurn = false;
     this.computerChoice = null;
     this.humanChoice = null;
     this.fighters = [];
@@ -70,9 +68,12 @@ pickGame() {
   };
 
   resetGame() {
-    // this.humanTurn = false;
-    // this.computerChoice = true;
     this.computerChoice = null;
     this.humanChoice = null;
+  };
+
+  resetArray() {
+    this.fighters = [];
+    this.gameChoice = null;
   };
 };
