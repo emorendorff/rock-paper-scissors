@@ -33,12 +33,6 @@ body {
   background-color: #FBC27D;
 }
 
-.display-fighters {
-  display: flex;
-  justify-content: space-around;
-  align-items: center
-}
-
 .game-option {
   text-align: center;
   background-color: #DE5818;
