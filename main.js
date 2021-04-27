@@ -78,7 +78,6 @@ function chooseFighterClassic() {
     if (event.target.id === 'piranha') {
       game.humanChoice = 'piranha'
     };
-    // console.log(event.target.id)
     game.randomizeFighter();
     hide(difficultFighters);
     show(displayFightersSection);
@@ -93,7 +92,7 @@ function chooseFighterClassic() {
       hide(classicFighters)
     } else if (game.gameChoice === 'Difficult') {
       hide(difficultFighters)
-    }
+    };
     displayFightersSection.innerHTML = ''
     displayFightersSection.innerHTML += `
       <img id=${humanChoice} src="assets/${humanChoice}.png">
@@ -108,8 +107,8 @@ function chooseFighterClassic() {
       chooseFighterText.innerText = 'DRAW! PLAY AGAIN!'
     } else {
       chooseFighterText.innerText = 'COMPUTER WINS THIS ROUND'
-    }
-    displayWins()
+    };
+    displayWins();
   };
 function declareDifficultWinner() {
     if (game.fightDifficult()) {
@@ -118,18 +117,18 @@ function declareDifficultWinner() {
       chooseFighterText.innerText = 'DRAW! PLAY AGAIN!'
     } else {
       chooseFighterText.innerText = 'COMPUTER WINS THIS ROUND'
-    }
-    displayWins()
+    };
+    displayWins();
   };
 
   function displayWins() {
-    winsHuman.innerText = `${game.playerOne.wins}`
-    winsComputer.innerText = `${game.playerTwo.wins}`
+    winsHuman.innerText = `${game.playerOne.wins}`;
+    winsComputer.innerText = `${game.playerTwo.wins}`;
   };
 
   function resetAll() {
-    game.resetGame()
-    window.setTimeout(returnGameBoard, 1500)
+    game.resetGame();
+    window.setTimeout(returnGameBoard, 1500);
   };
 
   function returnGameBoard() {
@@ -137,11 +136,11 @@ function declareDifficultWinner() {
       show(classicFighters)
     } else if (game.gameChoice === 'Difficult') {
       show(difficultFighters)
-    }
-    show(changeGameBtn)
-    displayChooseFighter()
-    hide(displayFightersSection)
-    chooseFighterText.innerText = 'Choose your fighter!'
+    };
+    show(changeGameBtn);
+    displayChooseFighter();
+    hide(displayFightersSection);
+    chooseFighterText.innerText = 'Choose your fighter!';
   };
 
   function retrieveWins() {
@@ -158,18 +157,18 @@ function declareDifficultWinner() {
   };
 
   function displayChooseFighter() {
-    hide(classicContainer)
-    hide(difficultContainer)
-    hide(chooseGameText)
-    show(chooseFighterText)
+    hide(classicContainer);
+    hide(difficultContainer);
+    hide(chooseGameText);
+    show(chooseFighterText);
   };
 
   function changeGame() {
-    hide(chooseFighterText)
-    hide(changeGameBtn)
-    hide(classicFighters)
-    hide(difficultFighters)
-    show(chooseGameText)
-    show(classicContainer)
-    show(difficultContainer)
+    hide(chooseFighterText);
+    hide(changeGameBtn);
+    hide(classicFighters);
+    hide(difficultFighters);
+    show(chooseGameText);
+    show(classicContainer);
+    show(difficultContainer);
   };
