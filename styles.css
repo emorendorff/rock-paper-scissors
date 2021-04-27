@@ -42,6 +42,7 @@ body {
 .game-option {
   text-align: center;
   background-color: #DE5818;
+  box-shadow: 10px 5px 5px black;
   width: 15vw;
 }
 
@@ -50,7 +51,8 @@ body {
 }
 
 img {
-  max-width: 20%;
+  width: 150px;
+  height: 150px;
 }
 
 img:hover {
