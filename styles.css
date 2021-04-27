@@ -1,11 +1,11 @@
+.alt-text {
+  font-family: 'Nunito', sans-serif;
+}
+
 body {
   margin: 0;
   background-color: #A0ADFF;
   font-family: 'Press Start 2P';
-}
-
-.alt-text {
-  font-family: 'Nunito', sans-serif;
 }
 
 .center-board {
@@ -18,7 +18,17 @@ body {
 }
 
 .change-game {
-  border-radius: 10%;
+  margin-top: 40%;
+  border-radius: 5%;
+  border: none;
+  height: 8vh;
+  width: 15vw;
+  font-size: 18px;
+  background-color: white;
+  font-family: 'Press Start 2P';
+}
+
+.change-game:hover {
   background-color: #FBC27D;
 }
 
