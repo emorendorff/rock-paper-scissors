@@ -25,6 +25,7 @@ body {
   width: 15vw;
   font-size: 18px;
   background-color: white;
+  box-shadow: 10px 5px 5px black;
   font-family: 'Press Start 2P';
 }
 
@@ -35,7 +36,6 @@ body {
 .display-fighters {
   display: flex;
   justify-content: space-around;
-  text-align: center;
   align-items: center
 }
 
@@ -48,6 +48,10 @@ body {
 
 .game-option:hover {
   background-color: #FBC27D;
+}
+
+.hidden {
+  display: none;
 }
 
 img {
@@ -74,8 +78,4 @@ img:hover {
   background-color: #DC5A17;
   height: 100vh;
   width: 20%;
-}
-
-.hidden {
-  display: none;
 }
