@@ -20,7 +20,7 @@ class Player {
   };
 
   retrieveWinsFromStorage() {
-    var wins = JSON.parse(localStorage.getItem(`${this.name}`)) || 0;
+    var wins = JSON.parse(localStorage.getItem(`${this.name}`) || 0);
     return wins;
   };
 }

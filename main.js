@@ -30,22 +30,23 @@ difficultContainer.addEventListener('click', newGame)
 changeGameBtn.addEventListener('click', changeGame);
 classicFighters.addEventListener('click', chooseFighterClassic);
 difficultFighters.addEventListener('click', chooseFighterDifficult);
+window.addEventListener('load', retrieveWins);
 
 //-------------Functions--------------//
 function newGame() {
   console.log('target', event.target.id)
   if(event.target.id === 'Classic') {
       // game = new Game('Classic')
-      console.log('choice', event.target.id)
+      // console.log('choice', event.target.id)
       game.gameChoice = 'Classic'
-      console.log('choice', game.gameChoice)
+      // console.log('choice', game.gameChoice)
       game.pickGame()
       show(classicFighters)
     }
   if(event.target.id === 'Difficult') {
       // game = new Game('Difficult')
       game.gameChoice = 'Difficult'
-      console.log('choice', game.gameChoice)
+      // console.log('choice', game.gameChoice)
       game.pickGame()
       show(difficultFighters)
     }
@@ -87,7 +88,7 @@ function chooseFighterClassic() {
     if (event.target.id === 'piranha') {
       game.humanChoice = 'piranha'
     };
-    console.log(event.target.id)
+    // console.log(event.target.id)
     game.randomizeFighter();
     hide(difficultFighters);
     show(displayFightersSection);
