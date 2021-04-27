@@ -53,6 +53,14 @@ img {
   max-width: 20%;
 }
 
+img:hover {
+  background-color: #FBC27D;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
 .main-page {
   display: flex;
   align-items: center;
