@@ -8,20 +8,6 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
- .main-page {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.display-fighters {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center
-}
-
 .center-board {
   display: flex;
   justify-content: space-around;
@@ -31,10 +17,16 @@ body {
   height: 100vh;
 }
 
-.side {
-  background-color: #DC5A17;
-  height: 100vh;
-  width: 20%
+.change-game {
+  border-radius: 10%;
+  background-color: #FBC27D;
+}
+
+.display-fighters {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center
 }
 
 .game-option {
@@ -44,16 +36,24 @@ body {
 }
 
 .game-option:hover {
-  background-color: #FBC27D
-}
-
-.change-game {
-  border-radius: 10%;
-  background-color: #FBC27D
+  background-color: #FBC27D;
 }
 
 img {
-  max-width: 20%
+  max-width: 20%;
+}
+
+.main-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.side {
+  background-color: #DC5A17;
+  height: 100vh;
+  width: 20%;
 }
 
 .hidden {
