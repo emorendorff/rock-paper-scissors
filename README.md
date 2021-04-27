@@ -26,13 +26,13 @@ This project created to demonstrate our understanding of:
 
 ## How to play
 - When the game loads, the user will see a left section displaying their emoji 🧑🏼‍🎤, display name (Human) and wins and a right section displaying the computer emoji 🖥 and wins. The main section directs the user to **Choose Your Game** and displays a *Classic* version and a *Difficult* version. The rules of the game are laid out in these displays and have a hover feature to indicate they are features to be clicked.
-![Landing Page]()
+![Landing Page](./assets/on-launch.gif)
 - Based on the user's game choice, 3 or 5 icons will appear on the screen for classic and difficult modes, respectively. Rock, Paper, Scissors for Classic. Chompy, Boo, Koopa, Mario and Piranha Plant for Difficult (a Super Mario Bros. theme!)
-![Choose Fighter]()
+![Choose Fighter](./assets/play-game.gif)
 - The user may hover over their selection and click to choose their fighter. The computer will then make it's choice based on a randomized index and both fighters will be displayed.  The game will result in either a Human win, Computer win, or draw. Wins will be displayed and incremented by one, draws will simply result in playing again, with neither side adding to their wins.
-![Wins Displayed]()
+![Wins Displayed](./assets/change-game.gif)
 - User has the option to refresh the page and have their wins kept in local storage. They will also keep their wins stored if the user clicks the "Change Game?" button to switch between the Classic and Difficult Versions.
-![Upon Refresh]()
+![Upon Refresh](./assets/on-refresh.gif)
 
 **[Back to top](#table-of-contents)**
 

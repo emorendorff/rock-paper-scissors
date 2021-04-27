@@ -31,7 +31,7 @@ pickGame() {
   fightClassic() {
     this.playerOne.wins = this.playerOne.retrieveWinsFromStorage();
     this.playerTwo.wins = this.playerTwo.retrieveWinsFromStorage();
-    
+
   if (this.humanChoice === 'rock' && this.computerChoice === 'scissors' || this.humanChoice === 'tp' && this.computerChoice === 'rock' || this.humanChoice === 'scissors' && this.computerChoice === 'tp') {
     this.playerOne.wins+= 1;
     this.playerOne.saveWinsToStorage();

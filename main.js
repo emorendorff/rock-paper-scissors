@@ -53,6 +53,7 @@ function chooseFighterClassic() {
   if (event.target.id === 'scissors') {
       game.humanChoice = 'scissors'
     };
+    
     game.randomizeFighter();
     hide(classicFighters);
     show(displayFightersSection);
@@ -78,6 +79,7 @@ function chooseFighterClassic() {
     if (event.target.id === 'piranha') {
       game.humanChoice = 'piranha'
     };
+
     game.randomizeFighter();
     hide(difficultFighters);
     show(displayFightersSection);
@@ -93,6 +95,7 @@ function chooseFighterClassic() {
     } else if (game.gameChoice === 'Difficult') {
       hide(difficultFighters)
     };
+
     displayFightersSection.innerHTML = ''
     displayFightersSection.innerHTML += `
       <img id=${humanChoice} src="assets/${humanChoice}.png">
@@ -108,6 +111,7 @@ function chooseFighterClassic() {
     } else {
       chooseFighterText.innerText = 'COMPUTER WINS THIS ROUND'
     };
+
     displayWins();
   };
 
@@ -138,6 +142,7 @@ function chooseFighterClassic() {
     } else if (game.gameChoice === 'Difficult') {
       show(difficultFighters)
     };
+
     show(changeGameBtn);
     displayChooseFighter();
     hide(displayFightersSection);
