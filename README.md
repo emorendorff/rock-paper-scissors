@@ -2,7 +2,7 @@
 ### Table of Contents
 - [Overview](#overview-and-project-goals)
 - [Features](#features)
-- [How does this work?](#how-to-pl
+- [How to Play](#how-to-play)
 - [Project Reflection](#project-reflection)
 - [Instructions for Running Project](#Instructions-for-running-project)
 - [Authors and Contributors](#credits)
